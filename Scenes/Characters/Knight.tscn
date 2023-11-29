@@ -42,7 +42,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Knight" type="CharacterBody2D"]
@@ -58,3 +58,5 @@ position = Vector2(0, -385)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_l1u0p")
 animation = &"idle"
+frame = 3
+frame_progress = 0.894443

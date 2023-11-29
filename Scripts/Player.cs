@@ -9,9 +9,16 @@ public partial class Player : CharacterBody2D
     public string Name;
     public int Direction;
 
+    public AnimatedSprite2D ASprite;
+
+
+    public override void _Ready()
+    {
+    }
+
     public void ChangeDirection()
     {
         Direction *= -1;
-        GetNode<AnimatedSprite2D>("AnimatedSprite2D").Scale = new Vector2(6 * Direction, 6);
+        ASprite.Scale = new Vector2(6 * Direction, 6);
     }
 }
