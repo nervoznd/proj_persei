@@ -1,0 +1,60 @@
+[gd_scene load_steps=12 format=3 uid="uid://bkjl3nfp1njhl"]
+
+[ext_resource type="Texture2D" uid="uid://bd4p4cgamf2qt" path="res://Assets/png/fire_knight/01_idle/idle_1.png" id="1_3d3q6"]
+[ext_resource type="Script" path="res://Scripts/Characters/Knight.cs" id="1_eu3uu"]
+[ext_resource type="Texture2D" uid="uid://2kk584tiiisc" path="res://Assets/png/fire_knight/01_idle/idle_2.png" id="2_pfxsq"]
+[ext_resource type="Texture2D" uid="uid://nmyir6mg851m" path="res://Assets/png/fire_knight/01_idle/idle_3.png" id="3_tcr56"]
+[ext_resource type="Texture2D" uid="uid://cra3k1aeivd7x" path="res://Assets/png/fire_knight/01_idle/idle_4.png" id="4_486oc"]
+[ext_resource type="Texture2D" uid="uid://dn55vq0jydhe7" path="res://Assets/png/fire_knight/01_idle/idle_5.png" id="5_dr40u"]
+[ext_resource type="Texture2D" uid="uid://jmqepuvut3bx" path="res://Assets/png/fire_knight/01_idle/idle_6.png" id="6_2a12q"]
+[ext_resource type="Texture2D" uid="uid://c8k2mrnddptpv" path="res://Assets/png/fire_knight/01_idle/idle_7.png" id="7_6gw8q"]
+[ext_resource type="Texture2D" uid="uid://ex7e03pdd7so" path="res://Assets/png/fire_knight/01_idle/idle_8.png" id="8_85n7v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gnhl"]
+size = Vector2(128, 257)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l1u0p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3d3q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pfxsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tcr56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_486oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dr40u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2a12q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6gw8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_85n7v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Knight" type="CharacterBody2D"]
+script = ExtResource("1_eu3uu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, -135.5)
+shape = SubResource("RectangleShape2D_7gnhl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -385)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_l1u0p")
+animation = &"idle"
