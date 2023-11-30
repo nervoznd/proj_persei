@@ -14,6 +14,9 @@ public partial class Player : CharacterBody2D
 
     public override void _Ready()
     {
+        ASprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+        ASprite.Animation = "idle";
+        ASprite.Play();
     }
 
     public void ChangeDirection()
